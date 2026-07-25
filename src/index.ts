@@ -1,23 +1,26 @@
 import type { Order } from "./interface.js";
+import { OrderBook } from "./OrderBook.js";
 
 const order1: Order = {
-  userId : "1",
+  userId: "1",
   price : 100,
   quantity : 1,
-  side : "Buy"
+  side : "buy"
 }
-
-
-console.log(order1)
-
-
-
+// console.log(order1)
 const order2: Order = {
   userId : "2",
   price : 100,
   quantity : 1,
-  side : "Sell"
+  side : "sell"
 }
+// console.log(order2)
 
+const myBook = new OrderBook();
+myBook.addOrder({ userId: "1", side: "buy", price: 100, quantity: 2 });
+myBook.addOrder({ userId: "2", side: "buy", price: 105, quantity: 5 });
+myBook.addOrder({ userId: "3", side : "sell", price: 110, quantity: 1 });
+myBook.addOrder({ userId: "4", side: "sell", price: 108, quantity: 3 });
 
-console.log(order2)
+console.log("BIDS (Buyers):", myBook.bids);
+console.log("ASKS (Sellers):", myBook.asks);
