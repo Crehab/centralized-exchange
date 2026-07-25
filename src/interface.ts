@@ -2,5 +2,5 @@ export interface Order {
   userId: string;
   price: number;
   quantity: number;
-  side: "Buy" | "Sell";
+  side: "buy" | "sell";
 }
