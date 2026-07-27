@@ -10,7 +10,7 @@ export class OrderBook {
       this.bids.push(newOrder);
       // bids sorting is here
       this.bids.sort((a, b): number => {
-       return  b.price - a.price; // Desending order for bids (Buy orders)
+       return  b.price - a.price; // Descending order for bids (Buy orders)
         
       })
     } else {
@@ -21,4 +21,12 @@ export class OrderBook {
       })
     }
   }
+  // TODO -  The Matching Algorithm 
+  // write the logic that connects a buyer and a seller.
+  
+  
+
+
+  
 }
+
