@@ -11,7 +11,7 @@ export class OrderBook {
       // bids sorting is here
       this.bids.sort((a, b): number => {
        return  b.price - a.price; // Descending order for bids (Buy orders)
-        
+
       })
     } else {
       this.asks.push(newOrder);
@@ -22,28 +22,31 @@ export class OrderBook {
     }
     this.match() // try to match immediately after adding
   }
-  // TODO -  The Matching Algorithm 
+  // TODO -  The Matching Algorithm
   // write the logic that connects a buyer and a seller.
 
-    match() {
-      while (this.bids.length > 0 && this.asks.length > 0) {
-        
-        if (this.bids.price  >= this.asks.price) {
-          Math.min(this.bids.quantity, this.asks.quantity);
-          const subtract = this.bids.quantity - this.asks.quantity;
+  match() {
 
-          if (this.bids.quantity === null) {
+    while (this.bids.length > 0 && this.asks.length > 0) {
+
+      const topBid = this.bids[0];
+      const topAsk = this.asks[0];
+
+      if(!topBid || !topAsk) break; // safety check, if undefined, break the loop.
+
+        if (topBid.price >= topAsk.price) {
+          const tradedQuantity = Math.min(topBid.quantity, topAsk.quantity);
+          topBid.quantity -= tradedQuantity;
+          topAsk.quantity -= tradedQuantity;
+
+          if (topBid.quantity === 0)
             this.bids.shift()
-          } else if (this.asks.quantity === null) {
+
+          if (topAsk.quantity === 0)
             this.asks.shift()
-          }
-          
-       } else
+        } else
+          // highest buyer wont payer lowest seller then, break the loop. no more trade.
           break;
-      }
     }
-
-
-  
+  }
 }
-
