@@ -22,7 +22,6 @@ export class OrderBook {
     }
     this.match() // try to match immediately after adding
   }
-  // TODO -  The Matching Algorithm
   // write the logic that connects a buyer and a seller.
 
   match() {
