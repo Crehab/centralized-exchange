@@ -11,5 +11,7 @@ wss.on('connection', function connection(ws) {
     console.log('Received raw data from client:', data.toString());
     // send a message back to the client.
     ws.send('Message received by the exchange server.')
-  })
-})
+  });
+});
+
+console.log("WebSocket Server is running on ws://localhost:8080");
