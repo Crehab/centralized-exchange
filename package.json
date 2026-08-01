@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dist/index.js",
+    "startServer": "node dist/server.js",
     "dev": "npx tsc"
   },
   "keywords": [],
