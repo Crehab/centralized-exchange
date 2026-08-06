@@ -1,6 +1,6 @@
 import { error } from 'console';
 import { WebSocketServer } from 'ws';
-
+import {OrderBook} from './OrderBook.js';
 const wss = new WebSocketServer({ port: 8080 }); // create new server
 
 // client connects to the server.
