@@ -43,9 +43,10 @@ export class OrderBook {
 
           if (topAsk.quantity === 0)
             this.asks.shift()
-        } else
+        } else {
           // highest buyer wont payer lowest seller then, break the loop. no more trade.
-          break;
+            break;
+        }
     }
   }
 }
