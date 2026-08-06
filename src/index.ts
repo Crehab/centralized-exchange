@@ -1,5 +1,5 @@
 import type { Order } from "./interface.js";
-import { OrderBook } from "./OrderBook.js";
+import { OrderBook } from "./orderBook.js";
 
 const order1: Order = {
   userId: "1",

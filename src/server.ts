@@ -1,11 +1,12 @@
 import { error } from 'console';
 import { WebSocketServer } from 'ws';
-import {OrderBook} from './OrderBook.js';
+import {OrderBook} from './orderBook.js';
 const wss = new WebSocketServer({ port: 8080 }); // create new server
 
 // client connects to the server.
 wss.on('connection', function connection(ws) {
-  console.log('A new client connected!');
+    console.log('A new client connected!');
+    
 
   // do this when THIS specific client sends message.
     ws.on('message', function message(data) {
