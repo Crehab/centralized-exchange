@@ -1,4 +1,4 @@
-[README.md](https://github.com/user-attachments/files/31016954/README.md)
+
 # Centralized Cryptocurrency Exchange
 
 A high-performance centralized exchange (CEX) backend built with **TypeScript** and **Node.js**.
