@@ -36,7 +36,12 @@ wss.on("connection", function connection(ws) {
                     }),
                 );
             } else {
-                console.log("Order could not be placed.");
+                ws.send(
+                    JSON.stringify({
+                        status: "fail",
+                        message: "Order could not be placed and processed.",
+                    }),
+                )
             }
         } catch (error) {
             console.error("Error parsing message:", error);
