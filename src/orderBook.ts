@@ -13,7 +13,7 @@ export class OrderBook {
                 return b.price - a.price; // Descending order for bids (Buy orders)
 
             })
-        } else {
+        } else if (newOrder.side === 'sell') {
             this.asks.push(newOrder);
             // ask sorting is here
             this.asks.sort((a, b): number => {
