@@ -1,24 +1,24 @@
 {
-  "name": "centralized-exchange",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node dist/index.js",
-    "startServer": "node dist/server.js",
-    "dev": "npx tsc"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^26.1.1",
-    "@types/ws": "^8.18.1",
-    "ts-node": "^10.9.2",
-    "typescript": "^7.0.2"
-  },
-  "dependencies": {
-    "ws": "^8.21.1"
-  }
+    "name": "centralized-exchange",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node dist/index.js",
+        "startServer": "node dist/server.js",
+        "dev": "npx tsc"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "module",
+    "devDependencies": {
+        "@types/node": "^26.1.1",
+        "@types/ws": "^8.18.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^7.0.2"
+    },
+    "dependencies": {
+        "ws": "^8.21.1"
+    }
 }
