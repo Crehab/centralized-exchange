@@ -12,9 +12,9 @@ wss.on("connection", function connection(ws) {
 
     // do this when THIS specific client sends message.
     ws.on("message", function message(data) {
+        // convert raw data string to JSON format.
+        const messageString = data.toString();
         try {
-            // convert raw data string to JSON format.
-            const messageString = data.toString();
             const parsedMessage = JSON.parse(messageString);
             // CREATE ORDER ACTION
             if (parsedMessage.action === "CREATE_ORDER") {
