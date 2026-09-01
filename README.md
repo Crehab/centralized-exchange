@@ -72,6 +72,20 @@ client.send(JSON.stringify({
     side: "buy"
   }
 }));
+
+// 3. Send a Sell Order
+client.send(JSON.stringify({
+  action: "CREATE_ORDER",
+  data: {
+    userId: "user_1",
+    price: 100,
+    quantity: 1,
+    side: "sell"
+  }
+}));
+
+
+
 ```
 
 ---
